@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>ECE 140A Lab 4</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="web_ui.css">
+        <script src="web_ui.js"></script>
+    </head>
+    <body>
+        <div class = "header" id = "header">
+            <div class = "title">TelloController</div>
+        </div>
+        <section class = "intro">
+            <p> Please choose your desired method</p>
+        </section>
+        <section class = "main-menu">
+            <button class = "interactive" onclick = "interactiveMode()"> Interactive mode</button>
+            <button class = "planned" onclick = "plannedMode()"> Flight Plan</button>
+        </section>
+          
+        <section class = "instructions">
+            <p class = "ii">Send each of your commands live and separately</p>
+            <p class = "pp"> Create your list of commands, and then send them all together</p><br>
+            <p class = "pp" id = "p"> Maximum Number of Instructions:15</p>
+        </section>
+          
+        <section class = 'guide'>
+            <button id = "1" name = "takeoff", onclick = "getLink(this.name,this.id)">takeoff</button>
+            <button id = "2" name = "up", onclick = "getLink(this.name,this.id)">up</button>
+            <button id = "3" name = "forward", onclick = "getLink(this.name,this.id)">forward</button>
+            <button id = "4" name = "ccw", onclick = "getLink(this.name,this.id)">ccw</button>
+            <button id = "5" name = "cw", onclick = "getLink(this.name,this.id)">cw</button>
+            <button id = "6" name = "back", onclick = "getLink(this.name,this.id)">back</button>
+            <button id = "7" name = "down", onclick = "getLink(this.name,this,id)">down</button>
+            <button id = "8" name = "land", onclick = "getLink(this.name,this.id)">land</button>
+        </section>
+          
+        <section class = "input-box">
+            <input type = "text" id = "commands">
+        </section>
+          
+        <section class = "res-send">
+            <button class = "res" onclick = "resetButton()">Reset Commands</button>
+            <button class = "send" onclick = "sendCommands()">Send Commands</button>
+            
+        </section>
+          
+        <section class="drone-status">
+            <div>pitch</div>
+            <div>roll</div>
+            <div>yaw</div>
+            <div>vgx</div>
+            <div>vgy</div>
+            <div>vgz</div>
+            <div>templ</div>
+            <div>temph</div>
+            <div>tof</div>
+            <div>h</div>
+            <div>bat</div>
+            <div>baro</div>
+            <div>time</div>
+            <div>agx</div>
+            <div>agy</div>
+            <div>agz</div><br>
+        </section>
+
+        <template id = "menu_tmpl">
+            <div id = "pitch">pitch</div>
+            <div id = "roll">roll</div>
+            <div id = "yaw">yaw</div>
+            <div id = "vgx">vgx</div>
+            <div id = "vgy">vgy</div>
+            <div id = "vgz">vgz</div>
+            <div id = "templ">templ</div>
+            <div id = "temph">temph</div>
+            <div id = "tof">tof</div>
+            <div id = "h">h</div>
+            <div id = "bat">bat</div>
+            <div id = "baro">baro</div>
+            <div id = "time">time</div>
+            <div id = "agx">agx</div>
+            <div id = "agy">agy</div>
+            <div id = "agz">agz</div>   
+        </template>
+
+    </body>
+</html>
